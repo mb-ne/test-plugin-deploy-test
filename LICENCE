@@ -1,0 +1,28 @@
+MACROBOND SKILL FILES SDK ΓÇö LICENCE AGREEMENT
+IMPORTANTΓÇö READ CAREFULLY: BY DOWNLOADING OR OTHERWISE USING THE SOFTWARE AND ANY ASSOCIATED DOCUMENTATION, YOU, ON BEHALF OF YOURSELF AND/OR AS AN AUTHORIZED REPRESENTATIVE ON BEHALF OF AN ENTITY (COLLECTIVELY, ΓÇ£CUSTOMERΓÇ¥), AGREE TO ALL THE TERMS OF THIS LICENSE AGREEMENT (ΓÇ£LICENSE AGREEMENTΓÇ¥) REGARDING CUSTOMERΓÇÖS USE OF THE SOFTWARE. YOU REPRESENT AND WARRANT THAT YOU HAVE FULL LEGAL AUTHORITY TO BIND CUSTOMER TO THIS AGREEMENT. THE EFFECTIVE DATE OF THIS AGREEMENT IS THE DATE ON WHICH YOU DOWNLOAD OR USE THE SOFTWARE.
+
+Copyright ┬⌐ 2026 Macrobond Financial AB. All rights reserved.
+
+1. DEFINITIONS
+Each term used and not so defined in this License Agreement shall have the same meaning as the term is used in the master license agreement signed by Customer (ΓÇ£MSAΓÇ¥).
+Software" means the Macrobond skill configuration files, prompt templates, schema definitions software, and associated Documentation accessed by Customer to enable a compatible AI assistant or large language model to discover, query, and retrieve data via the Macrobond AI Data Feed Service, as updated or supplemented by Macrobond from time to time.  Reference to Software in the MSA shall also include the Software licensed under this Licensed Agreement. 
+
+2. GRANT OF USE
+Subject to the terms of this Licence Agreement, the MSA and Customer having an  active paid subscription to the Macrobond AI Data Feed Service, Macrobond grants Customer  a limited, revokable, non-exclusive, non-transferable, non-sublicensable licence to use the Software solely in connection with CustomerΓÇÖs permitted use of the Macrobond AI Data Feed Service licensed under an applicable Order Form.
+
+3. MODIFICATIONS
+Customer may modify the Documentation for its own internal use. Modified versions to the Documentation may not be distributed, sublicensed, or otherwise made available to any third party.
+
+4. RESTRICTIONS
+Customer shall not: (a) distribute, sublicense, or transfer the Software or any modified version thereof to any third party; (b) use the Software outside the scope of CustomerΓÇÖs AI Data Feed Service licence; or (c) remove or alter any proprietary notices contained in the Software.
+
+5. PROPRIETARY RIGHTS.
+This License Agreement does not transfer any right, title or interest in any intellectual property to any party. The Software (including the source code, any modifications, improvements, enhancements or derivatives thereto) and the Documentation, are and shall remain the sole property of Macrobond. Except for the license rights granted under this License Agreement, Macrobond retains all right, title and interest in and to the Software and Documentation including all intellectual property rights therein and thereto.
+
+6. TERMINATION
+This Licence Agreement shall terminate automatically upon expiry or termination of your AI Data Feed Service license subscription. Upon termination, Customer shall cease all use and destroy any copies of the Software and Documentation.
+
+7. DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, TITLE, OR ACCURACY. MACROBOND SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM YOUR USE OF THE SOFTWARE.
+
+

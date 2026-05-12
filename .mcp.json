@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "macrobond": {
+      "type": "sse",
+      "url": "https://mcp.macrobond.com/sse"
+    }
+  }
+}

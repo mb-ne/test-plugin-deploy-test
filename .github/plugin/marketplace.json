@@ -1,0 +1,19 @@
+{
+  "name": "mb-ne-copilot-plugin",
+  "owner": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com"
+  },
+  "metadata": {
+    "description": "Macrobond economic data plugin for GitHub Copilot CLI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "macrobond",
+      "description": "Search and retrieve economic time series data from Macrobond",
+      "version": "1.0.0",
+      "source": "."
+    }
+  ]
+}

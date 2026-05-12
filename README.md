@@ -29,6 +29,17 @@ git clone https://github.com/mb-ne/copilot-plugin.git
 copilot plugin install ./copilot-plugin
 ```
 
+## Configuration
+
+Set these environment variables before using the plugin:
+
+```bash
+export MACROBOND_MCP_URL=https://mcp.macrobond.com/sse
+export MACROBOND_API_KEY=your_api_key_here
+```
+
+Add them to your shell profile (`~/.bashrc`, `~/.zshrc`, etc.) to persist across sessions.
+
 ## Usage
 
 Invoke with: `/macrobond`

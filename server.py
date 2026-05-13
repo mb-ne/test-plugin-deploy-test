@@ -5,10 +5,9 @@ Exposes the MacrobondAdapter methods as MCP tools for AI agents.
 
 Credential handling
 -------------------
-HTTP / SSE transport  : pass ``X-Macrobond-Client-ID`` and
-                        ``X-Macrobond-Client-Secret`` as request headers.
-stdio transport       : set ``MACROBOND_CLIENT_ID`` and
-                        ``MACROBOND_CLIENT_SECRET`` environment variables.
+Set ``MACROBOND_CLIENT_ID`` and ``MACROBOND_CLIENT_SECRET`` environment
+variables.  The server is started automatically by the AI agent via stdio
+transport — no manual server management needed.
 
 Each unique client-id gets its own ``MacrobondAdapter`` instance whose OAuth
 token is cached and refreshed automatically.  All state is held in the server
@@ -37,16 +36,24 @@ def _get_credentials() -> tuple[str, str]:
     HTTP mode  : reads ``X-Macrobond-Client-ID`` / ``X-Macrobond-Client-Secret`` headers.
     stdio mode : falls back to ``MACROBOND_CLIENT_ID`` / ``MACROBOND_CLIENT_SECRET`` env vars.
     """
-    headers = get_http_headers(
-        include={"x-macrobond-client-id", "x-macrobond-client-secret"}
-    )
-    client_id = headers.get("x-macrobond-client-id") or os.environ.get("MACROBOND_CLIENT_ID", "")
-    client_secret = headers.get("x-macrobond-client-secret") or os.environ.get("MACROBOND_CLIENT_SECRET", "")
+    client_id = ""
+    client_secret = ""
+    try:
+        headers = get_http_headers(
+            include={"x-macrobond-client-id", "x-macrobond-client-secret"}
+        )
+        client_id = headers.get("x-macrobond-client-id", "")
+        client_secret = headers.get("x-macrobond-client-secret", "")
+    except Exception:
+        pass
+
+    client_id = client_id or os.environ.get("MACROBOND_CLIENT_ID", "")
+    client_secret = client_secret or os.environ.get("MACROBOND_CLIENT_SECRET", "")
+
     if not client_id or not client_secret:
         raise MacrobondAuthError(
-            "Credentials required. Provide X-Macrobond-Client-ID and "
-            "X-Macrobond-Client-Secret headers (HTTP) or set "
-            "MACROBOND_CLIENT_ID / MACROBOND_CLIENT_SECRET env vars (stdio)."
+            "Credentials required. Set MACROBOND_CLIENT_ID and "
+            "MACROBOND_CLIENT_SECRET environment variables."
         )
     return client_id, client_secret
 
@@ -220,4 +227,4 @@ def fetch_observation_history(
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="stdio")

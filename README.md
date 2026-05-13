@@ -8,22 +8,21 @@ Query economic and financial time-series data from [Macrobond](https://www.macro
 - **Fetch** time series with metadata and observations
 - **Revision history** — query point-in-time data, track how statistics were revised
 - **Cross-country sets** — build comparable datasets across regions
-- **MCP Server** — connects to a remote Macrobond MCP server
+- **Local MCP Server** — starts automatically via stdio, no manual server setup needed
 
 ## Requirements
 
 - [Macrobond](https://www.macrobond.com/) account with API access
 - GitHub Copilot CLI
-- A running Macrobond MCP server (local or hosted)
+- [uv](https://docs.astral.sh/uv/) (Python package runner)
 
 ## Installation
 
 ### Step 1: Set environment variables
 
-Set your Macrobond API credentials and MCP server URL in your shell profile (`~/.bashrc`, `~/.zshrc`, or Windows user environment variables):
+Set your Macrobond API credentials in your shell profile (`~/.bashrc`, `~/.zshrc`, or Windows user environment variables):
 
 ```bash
-export MACROBOND_MCP_URL=http://127.0.0.1:8000/mcp   # URL of your running MCP server
 export MACROBOND_CLIENT_ID=your_client_id
 export MACROBOND_CLIENT_SECRET=your_client_secret
 ```
@@ -31,33 +30,17 @@ export MACROBOND_CLIENT_SECRET=your_client_secret
 On Windows (PowerShell):
 
 ```powershell
-[System.Environment]::SetEnvironmentVariable("MACROBOND_MCP_URL", "http://127.0.0.1:8000/mcp", "User")
 [System.Environment]::SetEnvironmentVariable("MACROBOND_CLIENT_ID", "your_client_id", "User")
 [System.Environment]::SetEnvironmentVariable("MACROBOND_CLIENT_SECRET", "your_client_secret", "User")
 ```
 
-### Step 2: Start the MCP server
-
-The MCP server is bundled in this plugin. Start it with:
-
-```bash
-pip install fastmcp requests
-python ~/.copilot/installed-plugins/mb-ne-copilot-plugin/macrobond/server.py
-```
-
-Or for a persistent background process:
-
-```bash
-fastmcp run ~/.copilot/installed-plugins/mb-ne-copilot-plugin/macrobond/server.py --transport streamable-http --port 8000
-```
-
-The server reads `MACROBOND_CLIENT_ID` and `MACROBOND_CLIENT_SECRET` from environment variables automatically.
-
-### Step 3: Install the plugin
+### Step 2: Install the plugin
 
 ```bash
 copilot plugin install mb-ne/copilot-plugin
 ```
+
+That's it. The MCP server starts automatically when the agent needs it — no manual server management required. Dependencies (`fastmcp`, `requests`) are resolved on the fly by `uv`.
 
 ## Usage
 
@@ -73,7 +56,7 @@ Example queries in Copilot CLI:
 ```
 copilot-plugin/
 ├── plugin.json                              # Plugin manifest
-├── .mcp.json                                # MCP server config (remote HTTP)
+├── .mcp.json                                # MCP server config (local stdio)
 ├── server.py                                # MCP server entry point
 ├── macrobond_adapter_http.py                # Macrobond HTTP client
 ├── requirements.txt                         # Python dependencies
@@ -89,7 +72,7 @@ copilot-plugin/
 
 ## How it works
 
-The plugin connects Copilot CLI to a Macrobond MCP server over HTTP. The server handles OAuth token management and caches tokens across requests — credentials are never sent through the plugin config, only held by the server process. Multiple users can share a single hosted server instance, each authenticated independently.
+The plugin runs a local MCP server via stdio transport. When the AI agent activates the plugin, it spawns the server process automatically using `uv run`, which handles dependency installation. The server authenticates with the Macrobond API using your credentials from environment variables, manages OAuth tokens, and caches them for the lifetime of the process. No credentials are persisted to disk.
 
 ## License
 

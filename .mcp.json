@@ -1,12 +1,14 @@
 {
   "mcpServers": {
     "macrobond": {
-      "type": "http",
-      "url": "${MACROBOND_MCP_URL}",
-      "headers": {
-        "X-Macrobond-Client-ID": "${MACROBOND_CLIENT_ID}",
-        "X-Macrobond-Client-Secret": "${MACROBOND_CLIENT_SECRET}"
-      }
+      "type": "local",
+      "command": "python",
+      "args": ["${MACROBOND_MCP_SERVER_PATH}"],
+      "env": {
+        "MACROBOND_CLIENT_ID": "${MACROBOND_CLIENT_ID}",
+        "MACROBOND_CLIENT_SECRET": "${MACROBOND_CLIENT_SECRET}"
+      },
+      "tools": ["*"]
     }
   }
 }

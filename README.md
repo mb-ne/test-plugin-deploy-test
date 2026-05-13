@@ -14,7 +14,8 @@ Query economic and financial time-series data from [Macrobond](https://www.macro
 
 - [Macrobond](https://www.macrobond.com/) account with API access
 - GitHub Copilot CLI
-- [uv](https://docs.astral.sh/uv/) (Python package runner)
+- Python 3.10+
+- Install dependencies: `pip install fastmcp requests`
 
 ## Installation
 
@@ -40,7 +41,7 @@ On Windows (PowerShell):
 copilot plugin install mb-ne/copilot-plugin
 ```
 
-That's it. The MCP server starts automatically when the agent needs it — no manual server management required. Dependencies (`fastmcp`, `requests`) are resolved on the fly by `uv`.
+That's it. The MCP server starts automatically when the agent needs it — no manual server management required.
 
 ## Usage
 
@@ -72,7 +73,7 @@ copilot-plugin/
 
 ## How it works
 
-The plugin runs a local MCP server via stdio transport. When the AI agent activates the plugin, it spawns the server process automatically using `uv run`, which handles dependency installation. The server authenticates with the Macrobond API using your credentials from environment variables, manages OAuth tokens, and caches them for the lifetime of the process. No credentials are persisted to disk.
+The plugin runs a local MCP server via stdio transport. When the AI agent activates the plugin, it spawns the server process automatically using Python. The server authenticates with the Macrobond API using your credentials from environment variables, manages OAuth tokens, and caches them for the lifetime of the process. No credentials are persisted to disk.
 
 ## License
 

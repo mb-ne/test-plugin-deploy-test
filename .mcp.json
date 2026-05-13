@@ -2,8 +2,8 @@
   "mcpServers": {
     "macrobond": {
       "type": "stdio",
-      "command": "uv",
-      "args": ["run", "--with", "fastmcp>=2.0.0", "--with", "requests>=2.28.0", "server.py"],
+      "command": "python",
+      "args": ["server.py"],
       "env": {
         "MACROBOND_CLIENT_ID": "${MACROBOND_CLIENT_ID}",
         "MACROBOND_CLIENT_SECRET": "${MACROBOND_CLIENT_SECRET}"

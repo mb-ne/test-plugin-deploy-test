@@ -1,13 +1,8 @@
 {
   "mcpServers": {
     "macrobond": {
-      "type": "local",
-      "command": "python",
-      "args": ["${USERPROFILE}/.copilot/installed-plugins/mb-ne-copilot-plugin/macrobond/server.py"],
-      "env": {
-        "MACROBOND_CLIENT_ID": "${MACROBOND_CLIENT_ID}",
-        "MACROBOND_CLIENT_SECRET": "${MACROBOND_CLIENT_SECRET}"
-      },
+      "type": "http",
+      "url": "${MACROBOND_MCP_URL}",
       "tools": ["*"]
     }
   }

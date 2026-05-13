@@ -8,43 +8,52 @@ Query economic and financial time-series data from [Macrobond](https://www.macro
 - **Fetch** time series with metadata and observations
 - **Revision history** — query point-in-time data, track how statistics were revised
 - **Cross-country sets** — build comparable datasets across regions
-- **MCP Server** — automatically configured when you install the plugin
+- **MCP Server** — bundled and automatically started when you install the plugin
+
+## Requirements
+
+- [Macrobond](https://www.macrobond.com/) account with API access
+- GitHub Copilot CLI
+- Python 3.10+ with `pip`
 
 ## Installation
 
-### Option 1: Install as Plugin (Recommended)
+### Step 1: Install Python dependencies
+
+The bundled MCP server requires `requests` and `fastmcp`:
 
 ```bash
-# Add the marketplace
-copilot plugin marketplace add mb-ne/copilot-plugin
-
-# Install the plugin
-copilot plugin install macrobond@mb-ne-copilot-plugin
+pip install requests fastmcp
 ```
 
-### Option 2: Manual Clone
+### Step 2: Set environment variables
+
+Set your Macrobond API credentials in your shell profile (`~/.bashrc`, `~/.zshrc`, or Windows user environment variables):
 
 ```bash
-git clone https://github.com/mb-ne/copilot-plugin.git
-copilot plugin install ./copilot-plugin
+export MACROBOND_CLIENT_ID=your_client_id
+export MACROBOND_CLIENT_SECRET=your_client_secret
 ```
 
-## Configuration
+On Windows (PowerShell):
 
-Set these environment variables before using the plugin:
+```powershell
+[System.Environment]::SetEnvironmentVariable("MACROBOND_CLIENT_ID", "your_client_id", "User")
+[System.Environment]::SetEnvironmentVariable("MACROBOND_CLIENT_SECRET", "your_client_secret", "User")
+```
+
+### Step 3: Install the plugin
 
 ```bash
-export MACROBOND_MCP_URL=https://mcp.macrobond.com/sse
-export MACROBOND_API_KEY=your_api_key_here
+copilot plugin install mb-ne/copilot-plugin
 ```
 
-Add them to your shell profile (`~/.bashrc`, `~/.zshrc`, etc.) to persist across sessions.
+The MCP server starts automatically when Copilot CLI needs it — no manual server management required.
 
 ## Usage
 
-Invoke with: `/macrobond`
+Example queries in Copilot CLI:
 
-Example queries:
 - "Get US CPI year-over-year data"
 - "Find German unemployment rate monthly"
 - "Build a G7 inflation comparison"
@@ -55,7 +64,10 @@ Example queries:
 ```
 copilot-plugin/
 ├── plugin.json                              # Plugin manifest
-├── .mcp.json                                # MCP server config
+├── .mcp.json                                # MCP server config (local stdio)
+├── server.py                                # MCP server entry point
+├── macrobond_adapter_http.py                # Macrobond HTTP client
+├── requirements.txt                         # Python dependencies
 ├── .github/
 │   ├── plugin/marketplace.json              # Marketplace manifest
 │   └── skills/macrobond/
@@ -66,10 +78,9 @@ copilot-plugin/
 └── LICENCE
 ```
 
-## Requirements
+## How it works
 
-- [Macrobond](https://www.macrobond.com/) account with API access
-- GitHub Copilot CLI
+The plugin bundles a Python MCP server (`server.py`) that talks to the Macrobond Web API. When Copilot CLI invokes a Macrobond tool, it spawns the server as a local subprocess over stdio — no network endpoint or port needed. OAuth tokens are fetched and cached automatically; credentials are passed via environment variables.
 
 ## License
 

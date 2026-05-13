@@ -3,7 +3,7 @@
     "macrobond": {
       "type": "local",
       "command": "python",
-      "args": ["${MACROBOND_MCP_SERVER_PATH}"],
+      "args": ["${USERPROFILE}/.copilot/installed-plugins/mb-ne-copilot-plugin/macrobond/server.py"],
       "env": {
         "MACROBOND_CLIENT_ID": "${MACROBOND_CLIENT_ID}",
         "MACROBOND_CLIENT_SECRET": "${MACROBOND_CLIENT_SECRET}"

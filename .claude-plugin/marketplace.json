@@ -1,9 +1,8 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "macrobond-plugins",
-  "metadata": {
-    "description": "Macrobond plugins for Claude Code and GitHub Copilot CLI",
-    "version": "1.0.0"
-  },
+  "version": "1.0.0",
+  "description": "Macrobond plugins for Claude Code",
   "owner": {
     "name": "Macrobond Financial AB",
     "email": "support@macrobond.com"
@@ -11,17 +10,9 @@
   "plugins": [
     {
       "name": "macrobond",
-      "source": {
-        "source": "github",
-        "repo": "mb-ne/test-plugin-deploy-test",
-        "path": "plugins/macrobond"
-      },
       "description": "Search and retrieve economic time series data from Macrobond.",
       "version": "1.0.0",
-      "skills": [
-        "./skills/macrobond"
-      ],
-      "mcpServers": ".mcp.json"
+      "source": "./plugins/macrobond"
     }
   ]
 }

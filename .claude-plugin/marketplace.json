@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "macrobond",
-      "source": ".",
+      "source": "./plugins/macrobond",
       "description": "Search and retrieve economic time series data from Macrobond.",
       "version": "1.0.0",
       "skills": [

@@ -2,7 +2,7 @@
   "mcpServers": {
     "macrobond-mcp": {
       "type": "http",
-      "url": "https://mcp.macrobond.com/mcp/",
+      "url": "http://localhost:8000/mcp/",
       "headers": {
         "X-Macrobond-Client-Id": "${MACROBOND_CLIENT_ID}",
         "X-Macrobond-Client-Secret": "${MACROBOND_CLIENT_SECRET}"

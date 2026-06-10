@@ -1,7 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "macrobond-plugins",
-  "description": "Macrobond plugins for Claude Code and Claude.ai",
+  "description": "Macrobond plugins for GitHub Copilot CLI",
   "owner": {
     "name": "Macrobond Financial AB",
     "email": "support@macrobond.com"
@@ -10,7 +9,7 @@
     {
       "name": "macrobond",
       "description": "Search and retrieve economic time series data from Macrobond.",
-      "source": "./plugins/claude/macrobond"
+      "source": "./plugins/copilot/macrobond"
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "macrobond",
+  "description": "Search and retrieve economic time series data from Macrobond.",
+  "version": "1.0.6",
+  "author": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

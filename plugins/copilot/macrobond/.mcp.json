@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "macrobond-mcp": {
+      "type": "http",
+      "url": "https://platform.macrobond.com/mcp",
+      "oauth": {
+        "clientId": "macrobond_mcp_search_retrieval",
+        "callbackPort": 8080
+      },
+      "oauthClientId": "macrobond_mcp_search_retrieval",
+      "oauthPublicClient": true,
+      "callbackPort": 8080
+    }
+  }
+}

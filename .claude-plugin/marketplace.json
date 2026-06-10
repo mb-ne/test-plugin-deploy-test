@@ -4,5 +4,11 @@
     "name": "Macrobond Financial AB",
     "email": "support@macrobond.com"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "hello-world",
+      "description": "A simple hello world skill.",
+      "source": "./plugins/hello-world"
+    }
+  ]
 }

@@ -2,11 +2,14 @@
   "mcpServers": {
     "macrobond-mcp": {
       "type": "http",
-      "url": "http://localhost:8000/mcp/",
-      "headers": {
-        "X-Macrobond-Client-Id": "${MACROBOND_CLIENT_ID}",
-        "X-Macrobond-Client-Secret": "${MACROBOND_CLIENT_SECRET}"
-      }
+      "url": "https://platform.macrobond.com/mcp",
+      "oauth": {
+        "clientId": "macrobond_mcp_search_retrieval",
+        "callbackPort": 8080
+      },
+      "oauthClientId": "macrobond_mcp_search_retrieval",
+      "oauthPublicClient": true,
+      "callbackPort": 8080
     }
   }
 }

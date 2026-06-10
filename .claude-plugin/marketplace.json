@@ -1,18 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "macrobond-plugins",
-  "version": "1.0.6",
-  "description": "Macrobond plugins for Claude Code",
+  "name": "test-plugins",
+  "version": "1.0.0",
+  "description": "Test marketplace for validating Claude.ai plugin sync",
   "owner": {
     "name": "Macrobond Financial AB",
     "email": "support@macrobond.com"
   },
   "plugins": [
     {
-      "name": "macrobond",
-      "description": "Search and retrieve economic time series data from Macrobond.",
-      "version": "1.0.6",
-      "source": "./plugins/macrobond"
+      "name": "hello-world",
+      "description": "A simple hello world plugin to verify marketplace sync works.",
+      "version": "1.0.0",
+      "source": "./plugins/hello-world"
     }
   ]
 }

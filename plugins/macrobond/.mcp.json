@@ -2,8 +2,7 @@
   "mcpServers": {
     "macrobond-mcp": {
       "type": "http",
-      "url": "https://platform.macrobond.com/mcp",
-      "clientId": "macrobond_mcp_search_retrieval",
+      "url": "https://staging.platform.macrobond.com/mcp",
       "oauth": {
         "clientId": "macrobond_mcp_search_retrieval",
         "callbackPort": 8080

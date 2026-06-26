@@ -63,5 +63,5 @@ To install the plugin from a ZIP file, download the ZIP, unzip it to a folder of
 
 ### License
 
-See [LICENCE](LICENCE).
+See [LICENCE](plugins/macrobond/skills/macrobond/LICENCE).
 

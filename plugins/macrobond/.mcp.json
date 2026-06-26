@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "macrobond-mcp": {
+    "macrobond-mcp-123-test": {
       "type": "http",
       "url": "https://staging.platform.macrobond.com/mcp",
       "oauth": {

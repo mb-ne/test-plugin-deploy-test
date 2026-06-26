@@ -6,7 +6,7 @@ metadata:
   author: Macrobond Financial AB
   version: 1.0.0
   copyright: Copyright 2026 Macrobond Financial AB. All rights reserved.
-  mcp-server: macrobond-mcp
+  mcp-server: macrobond-mcp-123-test
 ---
 
 # Macrobond

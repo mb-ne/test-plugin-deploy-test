@@ -2,7 +2,8 @@
   "mcpServers": {
     "macrobond-mcp-123-test": {
       "type": "http",
-      "url": "https://staging.platform.macrobond.com/mcp",
+      "url": "https://wishing-arrive-shipments-developer.trycloudflare.com/mcp",
+      "client_id": "macrobond_mcp_search_retrieval",
       "oauth": {
         "clientId": "macrobond_mcp_search_retrieval",
         "callbackPort": 8080

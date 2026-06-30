@@ -4,6 +4,13 @@
       "type": "http",
       "url": "https://wishing-arrive-shipments-developer.trycloudflare.com/mcp",
       "client_id": "macrobond_mcp_search_retrieval",
+      "scopes": [
+        "openid",
+        "offline_access",
+        "macrobond_web_api.search_retrieval_mcp",
+        "macrobond_web_api.read_mb",
+        "macrobond_web_api.search_mb"
+      ],
       "oauth": {
         "clientId": "macrobond_mcp_search_retrieval",
         "callbackPort": 8080

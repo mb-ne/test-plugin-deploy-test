@@ -1,0 +1,18 @@
+{
+  "name": "macrobond-plugins",
+  "owner": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com"
+  },
+  "metadata": {
+    "description": "Macrobond plugins for Cursor",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "macrobond",
+      "source": "./plugins/macrobond",
+      "description": "Search and retrieve economic time series data from Macrobond."
+    }
+  ]
+}

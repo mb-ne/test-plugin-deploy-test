@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "macrobond-mcp": {
+    "macrobond-mcp-plugintest": {
       "type": "http",
       "url": "https://platform.macrobond.com/mcp",
       "auth": {

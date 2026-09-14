@@ -1,11 +1,11 @@
 {
-  "name": "macrobond-plugins",
+  "name": "mb-cursor-plugin-test",
   "owner": {
     "name": "Macrobond Financial AB",
     "email": "support@macrobond.com"
   },
   "metadata": {
-    "description": "Macrobond plugins for Cursor",
+    "description": "Macrobond Cursor plugin, static client ID test",
     "version": "1.0.0"
   },
   "plugins": [

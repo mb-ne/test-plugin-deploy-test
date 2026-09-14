@@ -1,7 +1,7 @@
 {
   "name": "macrobond",
   "displayName": "Macrobond",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Search and retrieve economic time series data from Macrobond.",
   "author": {
     "name": "Macrobond Financial AB",

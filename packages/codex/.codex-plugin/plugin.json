@@ -1,6 +1,6 @@
 {
   "name": "macrobond",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Search and retrieve economic time series data from Macrobond.",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",

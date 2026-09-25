@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.29/MicrosoftTeams.schema.json",
     "manifestVersion": "1.29",
-    "version": "1.2.1",
+    "version": "1.2.3",
     "id": "1d98f38d-1f46-4a86-b3a4-7b25353586b7",
     "developer": {
         "name": "Macrobond Financial AB",

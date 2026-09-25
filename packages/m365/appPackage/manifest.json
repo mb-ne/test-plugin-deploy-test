@@ -1,0 +1,34 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.29/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.29",
+    "version": "1.2.1",
+    "id": "1d98f38d-1f46-4a86-b3a4-7b25353586b7",
+    "developer": {
+        "name": "Macrobond Financial AB",
+        "websiteUrl": "https://www.macrobond.com",
+        "privacyUrl": "https://www.macrobond.com/privacy-policy",
+        "termsOfUseUrl": "https://www.macrobond.com/terms-and-conditions"
+    },
+    "icons": {
+        "color": "logo.png",
+        "outline": "icon.png"
+    },
+    "name": {
+        "short": "Macrobond-staging",
+        "full": "Macrobond AI Data Feed"
+    },
+    "description": {
+        "short": "Search and retrieve economic time series data from Macrobond.",
+        "full": "Search, compare, and retrieve trusted macroeconomic intelligence from Macrobond, with consistent definitions, transparent sources, and clear charts and tables for reliable research."
+    },
+    "accentColor": "#0700FF",
+    "copilotAgents": {
+        "declarativeAgents": [
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "supportsChannelFeatures": "tier1"
+}

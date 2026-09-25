@@ -1,0 +1,31 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+    "version": "v1.8",
+    "name": "Macrobond-staging",
+    "description": "Search and retrieve economic time series data from Macrobond.",
+    "instructions": "Follow these steps in order for every data request.\n\n1. If the request is too generic to search, such as \"give me GDP\", ask what is missing: the region, the measure, the frequency or the period. Skip this when the request already says what to look for.\n2. Call get_instructions with no topic, then get_instructions with topic \"search\", and follow what they return. Load topic \"selection\" when several candidates look alike, \"retrieval\" for vintages or revisions, and \"presentation\" before answering with data.\n3. Call search_entities, one call per concept and region.\n4. Always open render_series_picker with the search_id and the best results as the recommended names. The user picks in the picker; do not ask for confirmation in text.",
+    "conversation_starters": [
+        {
+            "title": "Chart an indicator",
+            "text": "Give me a chart of Sweden GDP."
+        },
+        {
+            "title": "Compare inflation",
+            "text": "Compare US and euro area core inflation over the last ten years."
+        },
+        {
+            "title": "Build a table",
+            "text": "Show me a table of German unemployment, monthly, since 2020."
+        },
+        {
+            "title": "Analyze revisions",
+            "text": "What was US GDP growth as first reported, versus the current figure?"
+        }
+    ],
+    "actions": [
+        {
+            "id": "ai-plugin",
+            "file": "ai-plugin.json"
+        }
+    ]
+}

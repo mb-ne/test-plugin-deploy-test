@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "macrobond-mcp-plugintest": {
+    "macrobond-mcp": {
       "type": "http",
-      "url": "https://platform.macrobond.com/mcp",
+      "url": "https://staging.platform.macrobond.com/mcp",
       "auth": {
         "CLIENT_ID": "macrobond_mcp_search_retrieval",
         "scopes": [

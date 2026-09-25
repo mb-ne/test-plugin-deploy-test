@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "macrobond-plugins",
+  "description": "Macrobond plugins for Claude Code.",
+  "owner": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com"
+  },
+  "plugins": [
+    {
+      "name": "macrobond",
+      "source": "./packages/claude"
+    }
+  ]
+}

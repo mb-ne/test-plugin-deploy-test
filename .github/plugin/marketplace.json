@@ -5,14 +5,12 @@
     "email": "support@macrobond.com"
   },
   "metadata": {
-    "description": "Macrobond plugins for Cursor.",
-    "version": "1.2.1"
+    "description": "Macrobond plugins for GitHub Copilot CLI."
   },
   "plugins": [
     {
       "name": "macrobond",
-      "source": "./packages/cursor",
-      "description": "Search and retrieve economic time series data from Macrobond."
+      "source": "./packages/copilot"
     }
   ]
 }

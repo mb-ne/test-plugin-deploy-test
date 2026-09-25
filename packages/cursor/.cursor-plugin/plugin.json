@@ -1,0 +1,21 @@
+{
+  "name": "macrobond",
+  "displayName": "Macrobond",
+  "version": "1.2.1",
+  "description": "Search and retrieve economic time series data from Macrobond.",
+  "author": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com"
+  },
+  "homepage": "https://www.macrobond.com",
+  "repository": "https://github.com/macrobond-platform/macrobond-plugins",
+  "license": "LicenseRef-Macrobond-Proprietary",
+  "keywords": [
+    "macrobond",
+    "economic-data",
+    "macroeconomics",
+    "financial-data",
+    "market-data",
+    "time-series"
+  ]
+}

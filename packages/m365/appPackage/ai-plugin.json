@@ -1,0 +1,27 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+    "schema_version": "v2.4",
+    "name_for_human": "Macrobond-staging",
+    "description_for_human": "Search and retrieve economic time series data from Macrobond.",
+    "description_for_model": "Use Macrobond when the user needs to search, identify, retrieve, compare, chart, or tabulate macroeconomic and financial time series, metadata, release history, or economic indicators.",
+    "contact_email": "support@macrobond.com",
+    "legal_info_url": "https://www.macrobond.com/terms-and-conditions",
+    "privacy_policy_url": "https://www.macrobond.com/privacy-policy",
+    "namespace": "mbstaging",
+    "functions": [],
+    "runtimes": [
+        {
+            "type": "RemoteMCPServer",
+            "spec": {
+                "url": "https://staging.platform.macrobond.com/mcp"
+            },
+            "run_for_functions": [
+                "*"
+            ],
+            "auth": {
+                "type": "OAuthPluginVault",
+                "reference_id": "YmVhOWNiM2EtYWU1OS00ZWE1LWEwZGUtYjMzNzFmZTQxZGQ0IyMyNzNiY2RkYS1mOTdkLTRmZmEtYWZkOS1iOGZhYzM1NTNhYjE="
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "macrobond-mcp": {
+      "type": "http",
+      "url": "https://staging.platform.macrobond.com/mcp",
+      "oauth": {
+        "client_id": "macrobond_mcp_search_retrieval"
+      },
+      "scopes": [
+        "macrobond_web_api.search_retrieval_mcp",
+        "macrobond_web_api.read_mb",
+        "macrobond_web_api.search_mb",
+        "offline_access"
+      ]
+    }
+  }
+}

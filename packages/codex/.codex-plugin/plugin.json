@@ -1,0 +1,45 @@
+{
+  "name": "macrobond",
+  "version": "1.2.1",
+  "description": "Search and retrieve economic time series data from Macrobond.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Macrobond",
+    "shortDescription": "Search and retrieve economic time series data from Macrobond.",
+    "longDescription": "Search, compare, and retrieve trusted macroeconomic intelligence from Macrobond, with consistent definitions, transparent sources, and clear charts and tables for reliable research.",
+    "developerName": "Macrobond Financial AB",
+    "category": "Data",
+    "capabilities": [
+      "Search",
+      "Read"
+    ],
+    "websiteURL": "https://www.macrobond.com",
+    "privacyPolicyURL": "https://www.macrobond.com/privacy-policy",
+    "termsOfServiceURL": "https://www.macrobond.com/terms-and-conditions",
+    "brandColor": "#0700FF",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "defaultPrompt": [
+      "Give me a chart of Sweden GDP.",
+      "Compare US and euro area core inflation over the last ten years.",
+      "Show me a table of German unemployment, monthly, since 2020."
+    ]
+  },
+  "author": {
+    "name": "Macrobond Financial AB",
+    "email": "support@macrobond.com",
+    "url": "https://www.macrobond.com"
+  },
+  "homepage": "https://www.macrobond.com",
+  "repository": "https://github.com/macrobond-platform/macrobond-plugins",
+  "license": "LicenseRef-Macrobond-Proprietary",
+  "keywords": [
+    "macrobond",
+    "economic-data",
+    "macroeconomics",
+    "financial-data",
+    "market-data",
+    "time-series"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "macrobond",
+  "version": "1.2.1",
+  "description": "Search and retrieve economic time series data from Macrobond.",
+  "mcpServers": {
+    "macrobond-mcp": {
+      "url": "https://staging.platform.macrobond.com/mcp",
+      "type": "http",
+      "description": "Search and retrieve economic time series data from Macrobond.",
+      "authProviderType": "dynamic_discovery",
+      "oauth": {
+        "enabled": true,
+        "clientId": "macrobond_mcp_search_retrieval",
+        "scopes": [
+          "macrobond_web_api.search_retrieval_mcp",
+          "macrobond_web_api.read_mb",
+          "macrobond_web_api.search_mb",
+          "offline_access"
+        ]
+      }
+    }
+  }
+}
